@@ -27,7 +27,7 @@ def create_or_update_customer(data):
             for key, value in customer_data.items():
                 customer_doc.set(key, value)
             customer_doc.insert()
-            return {"status": "success", "message": "Customer created successfully. ", "customer_id": customer_doc.name}, 201
+            return {"status": "success", "message": "Customer created successfully.  ", "customer_id": customer_doc.name}, 201
     finally:
         frappe.set_user(current_user)
 
